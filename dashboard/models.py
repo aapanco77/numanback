@@ -11,7 +11,7 @@ class Team(models.Model):
     coworker = models.CharField(max_length=30)
     status = models.CharField(max_length=20)
     assign_project = models.CharField(max_length=20)
-    
+
     class Meta:
         ordering = ['company']
 

@@ -21,7 +21,7 @@
                     <img src="{% static 'img/logo-numan.svg' %}" alt="" class="imagen-responsiva">
                 </div>
                 <div class="icono-crud">
-                    <a href="" class="tooltip"><i class="fas fa-project-diagram"></i>
+                    <a href="{% url 'dashboard:add' %}" class="tooltip"><i class="fas fa-project-diagram"></i>
                         <span class="tooltiptext">Agregar Proyectos</span>
                     </a>
                 </div>
@@ -36,6 +36,7 @@
                     </a>
                 </div>
                 <div class="icono-crud">
+                    {% comment %} {% url 'dashboard:delete' %} {% endcomment %}
                     <a href="" class="tooltip"><i class="fas fa-eraser"></i>
                         <span class="tooltiptext">Eliminar Proyecto</span>
                     </a>
@@ -49,7 +50,7 @@
             <section class="panel-grid">
                 <div class="item1">
                     <h1>Bienvenido {{ user.username }}</h1>
-                    <h2>Estos son los Proyectos a tu cargo {{ date }}</h2>
+                    <h2>Estos son los Proyectos a tu Cargo {{ date }}</h2>
                     <div>
 
                     </div>
@@ -84,7 +85,7 @@
                     </ul>
                 </div>  
                 <div class="item4">
-                    <h2>Repositorios de Marca</h2>
+                    <h2>Repositorios de los Clientes</h2>
                     <ul>
                         {% for member in members %}
                     <li>

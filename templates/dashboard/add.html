@@ -1,0 +1,27 @@
+<h1>Agregar Proyectos</h1>
+
+<form action="addrecord/" method="POST">
+{% csrf_token %}
+Cliente:<br>
+<input name="company">
+<br><br>
+Avance de la Campaña:<br>
+<input name="progress">
+<br><br>
+Link de Repositorio:<br>
+<input name="url_drive">
+<br><br>
+Entregable de Máxima Prioridad:<br>
+<input name="dummies">
+<br><br>
+Colaborador Asignado:<br>
+<input name="coworker">
+<br><br>
+Estado del Proyecto:<br>
+<input name="status">
+<br><br>
+Proyecto Asignado al Colaborador:<br>
+<input name="assign_project">
+<br><br>
+<input type="submit" value="Submit">
+</form>
