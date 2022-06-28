@@ -26,13 +26,19 @@
                     </a>
                 </div>
                 <div class="icono-crud">
-                    <i class="fas fa-user-astronaut"></i>
+                    <a href="" class="tooltip"><i class="fas fa-user-astronaut"></i>
+                        <span class="tooltiptext">Agregar Miembros al Proyecto</span>
+                    </a>
                 </div>
                 <div class="icono-crud">
-                    <i class="fas fa-rocket"></i>
+                    <a href="" class="tooltip"><i class="fas fa-rocket"></i>
+                        <span class="tooltiptext">Editar Avances del Proyecto</span>
+                    </a>
                 </div>
                 <div class="icono-crud">
-                    <i class="fas fa-edit"></i>
+                    <a href="" class="tooltip"><i class="fas fa-edit"></i>
+                        <span class="tooltiptext">Agregar Nota de Blog</span>
+                    </a>
                 </div>
                 <div class="icono-crud">
                     <a href="{% url 'admin:logout' %}" class="tooltip"><i class="fas fa-door-open"></i>
@@ -43,28 +49,35 @@
             <section class="panel-grid">
                 <div class="item1">
                     <h1>Bienvenido {{ user.username }}</h1>
-                    <h2>Estos son tus proyectos y sus avances {{ date }}</h2>
+                    <h2>Estos son los Proyectos a tu cargo {{ date }}</h2>
                     <div>
 
                     </div>
                     <ul>
-                        <li>AstraZeneca <div class="estado">100%</div></li>
-                        <li>BIFAM <div class="estado"></div></li>
-                        <li></li>
-                        <li></li>
+                        <li>AstraZeneca <span class="estado">100%</span></li>
+                        <li>BIFAM <span class="estado">90%</span></li>
+                        <li>IncluyenTS <span class="estado">95%</span></li>
                     </ul>
                 </div>
                 <div class="item2">
-                    <h2>Ruta Crítica</h2>
+                    <h2>Equipo del Proyecto</h2>
+                    {% for member in members %}
+                    <div class="equipo">
+                        <h3 class="colaborador"><i class="fas fa-user-circle"></i> &nbsp; {{ member.coworker}}</h3>
+                        <h4>{{ member.status }}</h4>
+                        <p>Proyecto: {{ member.assign_project|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+                </li>
                 </div>
                 <div class="item3">
-                    <h2>Equipo Asignado al Proyecto</h2>
+                    <h2>Death Lines Por Proyecto</h2>
                 </div>  
                 <div class="item4">
-                    <h2>Equipo Asignado al Proyecto</h2>
+                    <h2>Repositorios de Marca</h2>
                 </div>
                 <div class="item5">
-                    <h2>Equipo Asignado al Proyecto</h2>
+                    <h2>Entregables Prioritarios por Proyecto</h2>
                 </div>
             </section>
         </section>

@@ -25,7 +25,6 @@ def login_view(request):
 
      return render(request, "index/login.html", context)
 
-
 def logout_view(request):
      logout(request)
      return redirect("users:login")

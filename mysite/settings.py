@@ -116,9 +116,9 @@ STATICFILES_DIRS = [
 ]
 
 # # Authentication
-# LOGIN_URL = "index:login"
-# LOGIN_REDIRECT_URL = 'dashboard:show_dashboard'
-# LOGOUT_REDIRECT_URL = LOGIN_URL
+LOGIN_URL = "index:login"
+LOGIN_REDIRECT_URL = 'dashboard:show_dashboard'
+LOGOUT_REDIRECT_URL = LOGIN_URL
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
