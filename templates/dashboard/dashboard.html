@@ -54,13 +54,16 @@
 
                     </div>
                     <ul>
-                        <li>AstraZeneca <span class="estado">100%</span></li>
-                        <li>BIFAM <span class="estado">90%</span></li>
-                        <li>IncluyenTS <span class="estado">95%</span></li>
+                        {% for member in members %}
+                    <li>
+                        <span class="company">{{ member.company}}</span>
+                        <span class="progress">{{ member.progress}}%</span>
+                    </li>
+                {% endfor %}
                     </ul>
                 </div>
                 <div class="item2">
-                    <h2>Equipo del Proyecto</h2>
+                    <h2>Colaboradores Asignados</h2>
                     {% for member in members %}
                     <div class="equipo">
                         <h3 class="colaborador"><i class="fas fa-user-circle"></i> &nbsp; {{ member.coworker}}</h3>
@@ -72,12 +75,33 @@
                 </div>
                 <div class="item3">
                     <h2>Death Lines Por Proyecto</h2>
+                    <ul>
+                        {% for member in members %}
+                    <li>
+                        <span class="enfasis">{{ member.company}}</span> | {{ member.death_line }}
+                    </li>
+                {% endfor %}
+                    </ul>
                 </div>  
                 <div class="item4">
                     <h2>Repositorios de Marca</h2>
+                    <ul>
+                        {% for member in members %}
+                    <li>
+                        <span class="enfasis">{{ member.company}}</span> | &nbsp; <a href="{{ member.url_drive }}" target="_blank"><i class="fab fa-google-drive"></i></a>
+                    </li>
+                {% endfor %}
+                    </ul>
                 </div>
                 <div class="item5">
-                    <h2>Entregables Prioritarios por Proyecto</h2>
+                    <h2>Entregables Máxima Prioridad</h2>
+                    <ul>
+                        {% for member in members %}
+                    <li>
+                        <span class="enfasis white">{{ member.company}}</span> | {{ member.dummies}}</a>
+                    </li>
+                {% endfor %}
+                    </ul>
                 </div>
             </section>
         </section>
