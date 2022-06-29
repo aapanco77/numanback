@@ -1,27 +1,45 @@
-<h1>Agregar Proyectos</h1>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="proyectos">
+        <div class="cuadro">
+            <h1>Agregar Proyectos</h1>
 
-<form action="addrecord/" method="POST">
-{% csrf_token %}
-Cliente:<br>
-<input name="company">
-<br><br>
-Avance de la Campaña:<br>
-<input name="progress">
-<br><br>
-Link de Repositorio:<br>
-<input name="url_drive">
-<br><br>
-Entregable de Máxima Prioridad:<br>
-<input name="dummies">
-<br><br>
-Colaborador Asignado:<br>
-<input name="coworker">
-<br><br>
-Estado del Proyecto:<br>
-<input name="status">
-<br><br>
-Proyecto Asignado al Colaborador:<br>
-<input name="assign_project">
-<br><br>
-<input type="submit" value="Submit">
-</form>
+            <form action="addrecord/" method="POST">
+            {% csrf_token %}
+            Cliente:<br>
+            <input name="company">
+            <br><br>
+            Avance de la Campaña:<br>
+            <input name="progress">
+            <br><br>
+            Link de Repositorio:<br>
+            <input name="url_drive">
+            <br><br>
+            Entregable de Máxima Prioridad:<br>
+            <input name="dummies">
+            <br><br>
+            Colaborador Asignado:<br>
+            <input name="coworker">
+            <br><br>
+            Estado del Proyecto:<br>
+            <input name="status">
+            <br><br>
+            Proyecto Asignado al Colaborador:<br>
+            <input name="assign_project">
+            <br><br>
+            <input type="submit" value="Agregar Proyecto">
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+

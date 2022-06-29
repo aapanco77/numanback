@@ -22,8 +22,3 @@ def addrecord(request):
     project = Team(company=companyName, progress=progress, url_drive= linkCompany, dummies=dummie, coworker=cowork, status=statusCoworker, assign_project=coworkerProject )
     project.save()
     return HttpResponseRedirect(reverse('dashboard:show_dashboard'))
-
-# def delete(request):
-#     erase = Team.objects.get
-#     erase.delete()
-#     return HttpResponseRedirect(reverse('dashboard:show_dashboard'))
